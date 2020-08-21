@@ -1,0 +1,98 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Account",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 65207
+        }
+      ],
+      "UpstreamPathTemplate": "/Account/"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Account/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 65207
+        }
+      ],
+      "UpstreamPathTemplate": "/Account/{url}"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Admin/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 65215
+        }
+      ],
+      "UpstreamPathTemplate": "/Admin/{url}"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Admin",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 65215
+        }
+      ],
+      "UpstreamPathTemplate": "/Admin/"
+    },
+    {
+      "DownstreamPathTemplate": "/api/User/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 65218
+        }
+      ],
+      "UpstreamPathTemplate": "/User/{url}"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/User",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 65218
+        }
+      ],
+      "UpstreamPathTemplate": "/User/"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Excel/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 65222
+        }
+      ],
+      "UpstreamPathTemplate": "/Excel/{url}"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Excel",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 65222
+        }
+      ],
+      "UpstreamPathTemplate": "/Excel/"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:51926"
+  }
+}

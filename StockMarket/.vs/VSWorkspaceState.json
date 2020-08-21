@@ -1,0 +1,9 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\StockMarket.AccountAPI",
+    "\\StockMarket.AccountAPI\\DBAccess"
+  ],
+  "SelectedNode": "\\StockMarket.AccountAPI\\DBAccess\\StockDBContext.cs",
+  "PreviewInSolutionExplorer": false
+}
