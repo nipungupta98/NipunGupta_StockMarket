@@ -44,14 +44,13 @@ namespace StockMarket.UserAPI
             }
 
             app.UseRouting();
-
+            app.UseCors("AllowMyOrigin");
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
-            app.UseCors("AllowMyOrigin");
         }
     }
 }

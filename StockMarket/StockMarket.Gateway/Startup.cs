@@ -48,7 +48,7 @@ namespace StockMarket.Gateway
             }
 
             app.UseRouting();
-
+            app.UseCors("AllowMyOrigin");
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -56,7 +56,6 @@ namespace StockMarket.Gateway
                 endpoints.MapControllers();
             });
             app.UseOcelot();
-            app.UseCors("AllowMyOrigin");
         }
     }
 }

@@ -24,6 +24,7 @@ namespace StockMarket.ExcelAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddCors(c =>
             {
                 c.AddPolicy("AllowOrigin", options =>
@@ -32,7 +33,6 @@ namespace StockMarket.ExcelAPI
                 .AllowAnyHeader()
                 );
             });
-
             services.AddControllers();
         }
 
@@ -45,14 +45,13 @@ namespace StockMarket.ExcelAPI
             }
 
             app.UseRouting();
-
+            app.UseCors("AllowMyOrigin");
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
-            app.UseCors("AllowMyOrigin");
         }
     }
 }

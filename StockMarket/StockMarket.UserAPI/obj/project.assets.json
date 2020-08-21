@@ -5771,11 +5771,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\socgend20\\Desktop\\NipunGupta_StockMarket\\Middleware\\StockMarket\\StockMarket.UserAPI\\StockMarket.UserAPI.csproj",
+      "projectUniqueName": "C:\\Users\\socgend20\\Desktop\\NipunGupta_StockMarket\\StockMarket\\StockMarket.UserAPI\\StockMarket.UserAPI.csproj",
       "projectName": "StockMarket.UserAPI",
-      "projectPath": "C:\\Users\\socgend20\\Desktop\\NipunGupta_StockMarket\\Middleware\\StockMarket\\StockMarket.UserAPI\\StockMarket.UserAPI.csproj",
+      "projectPath": "C:\\Users\\socgend20\\Desktop\\NipunGupta_StockMarket\\StockMarket\\StockMarket.UserAPI\\StockMarket.UserAPI.csproj",
       "packagesPath": "C:\\Users\\socgend20\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\socgend20\\Desktop\\NipunGupta_StockMarket\\Middleware\\StockMarket\\StockMarket.UserAPI\\obj\\",
+      "outputPath": "C:\\Users\\socgend20\\Desktop\\NipunGupta_StockMarket\\StockMarket\\StockMarket.UserAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

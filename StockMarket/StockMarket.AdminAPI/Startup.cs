@@ -27,6 +27,10 @@ namespace StockMarket.AdminAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddDbContext<StockDBContext>();
+            services.AddTransient<IAdminRepository, AdminRepository>();
+            services.AddTransient<IAdminService, AdminService>();
             services.AddCors(c =>
             {
                 c.AddPolicy("AllowOrigin", options =>
@@ -35,10 +39,6 @@ namespace StockMarket.AdminAPI
                 .AllowAnyHeader()
                 );
             });
-
-            services.AddDbContext<StockDBContext>();
-            services.AddTransient<IAdminRepository, AdminRepository>();
-            services.AddTransient<IAdminService, AdminService>();
             services.AddControllers();
         }
 
@@ -51,14 +51,13 @@ namespace StockMarket.AdminAPI
             }
 
             app.UseRouting();
-
+            app.UseCors("AllowMyOrigin");
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
-            app.UseCors("AllowMyOrigin");
         }
     }
 }

@@ -28,6 +28,10 @@ namespace StockMarket.AccountAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddDbContext<StockDBContext>();
+            services.AddTransient<IAccountRepository, AccountRepository>();
+            services.AddTransient<IAccountService, AccountService>();
             services.AddCors(c =>
             {
                 c.AddPolicy("AllowOrigin", options =>
@@ -36,10 +40,6 @@ namespace StockMarket.AccountAPI
                 .AllowAnyHeader()
                 );
             });
-
-            services.AddDbContext<StockDBContext>();
-            services.AddTransient<IAccountRepository, AccountRepository>();
-            services.AddTransient<IAccountService, AccountService>();
             services.AddControllers();
         }
 
@@ -52,14 +52,13 @@ namespace StockMarket.AccountAPI
             }
 
             app.UseRouting();
-
+            app.UseCors("AllowMyOrigin");
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
-            app.UseCors("AllowMyOrigin");
         }
     }
 }

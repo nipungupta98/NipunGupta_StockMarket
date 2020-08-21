@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\socgend20\\Desktop\\NipunGupta_StockMarket\\Middleware\\StockMarket\\StockMarket.ExcelAPI\\StockMarket.ExcelAPI.csproj": {}
+    "C:\\Users\\socgend20\\Desktop\\NipunGupta_StockMarket\\StockMarket\\StockMarket.ExcelAPI\\StockMarket.ExcelAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\socgend20\\Desktop\\NipunGupta_StockMarket\\Middleware\\StockMarket\\StockMarket.ExcelAPI\\StockMarket.ExcelAPI.csproj": {
+    "C:\\Users\\socgend20\\Desktop\\NipunGupta_StockMarket\\StockMarket\\StockMarket.ExcelAPI\\StockMarket.ExcelAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\socgend20\\Desktop\\NipunGupta_StockMarket\\Middleware\\StockMarket\\StockMarket.ExcelAPI\\StockMarket.ExcelAPI.csproj",
+        "projectUniqueName": "C:\\Users\\socgend20\\Desktop\\NipunGupta_StockMarket\\StockMarket\\StockMarket.ExcelAPI\\StockMarket.ExcelAPI.csproj",
         "projectName": "StockMarket.ExcelAPI",
-        "projectPath": "C:\\Users\\socgend20\\Desktop\\NipunGupta_StockMarket\\Middleware\\StockMarket\\StockMarket.ExcelAPI\\StockMarket.ExcelAPI.csproj",
+        "projectPath": "C:\\Users\\socgend20\\Desktop\\NipunGupta_StockMarket\\StockMarket\\StockMarket.ExcelAPI\\StockMarket.ExcelAPI.csproj",
         "packagesPath": "C:\\Users\\socgend20\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\socgend20\\Desktop\\NipunGupta_StockMarket\\Middleware\\StockMarket\\StockMarket.ExcelAPI\\obj\\",
+        "outputPath": "C:\\Users\\socgend20\\Desktop\\NipunGupta_StockMarket\\StockMarket\\StockMarket.ExcelAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

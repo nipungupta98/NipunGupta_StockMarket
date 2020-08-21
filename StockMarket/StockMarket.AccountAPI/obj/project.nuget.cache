@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u6X+C8ODJzTRTZYFo6B5KipG4n+t1w6NXgGEGNBUmqmjkJDzRaHJ0V3DULYgH/cgEkbM87f6R99wqRSIm4HZmw==",
+  "dgSpecHash": "p9Zy63fgRETtPa0/xt6SIbEJGRaTsbvlLNnhr5ynQ5+joNYM3QIGyLasjJKJCpvao1ApfrJ6aHFgzouejuPyMQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\socgend20\\Desktop\\NipunGupta_StockMarket\\Middleware\\StockMarket\\StockMarket.AccountAPI\\StockMarket.AccountAPI.csproj",
+  "projectFilePath": "C:\\Users\\socgend20\\Desktop\\NipunGupta_StockMarket\\StockMarket\\StockMarket.AccountAPI\\StockMarket.AccountAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\socgend20\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
     "C:\\Users\\socgend20\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
