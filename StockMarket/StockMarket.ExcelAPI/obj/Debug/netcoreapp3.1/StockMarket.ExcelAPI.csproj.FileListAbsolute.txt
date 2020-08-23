@@ -130,6 +130,7 @@ C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.ExcelA
 C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.ExcelAPI\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
 C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.ExcelAPI\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard2.0\System.Data.SqlClient.dll
 C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.ExcelAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Data.SqlClient.dll
+C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.ExcelAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.ExcelAPI\obj\Debug\netcoreapp3.1\StockMarket.ExcelAPI.csproj.CoreCompileInputs.cache
 C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.ExcelAPI\obj\Debug\netcoreapp3.1\StockMarket.ExcelAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.ExcelAPI\obj\Debug\netcoreapp3.1\StockMarket.ExcelAPI.MvcApplicationPartsAssemblyInfo.cache
