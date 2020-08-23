@@ -17,7 +17,7 @@ namespace StockMarket.UserAPI.Models
         [StringLength(30)]
         public string CompanyName { get; set; }
         [StringLength(30)]
-        public float Turnover { get; set; }
+        public string Turnover { get; set; }
         [StringLength(30)]
         public string CEO { get; set; }
         public string BoardofDirectors { get; set; }

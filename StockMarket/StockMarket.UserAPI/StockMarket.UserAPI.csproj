@@ -5,6 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200823064733_Initial.cs" />
+    <Compile Remove="Migrations\20200823064733_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20200823064902_initial.cs" />
+    <Compile Remove="Migrations\20200823064902_initial.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EPPlus.Core" Version="1.5.4" />
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.7">
       <PrivateAssets>all</PrivateAssets>

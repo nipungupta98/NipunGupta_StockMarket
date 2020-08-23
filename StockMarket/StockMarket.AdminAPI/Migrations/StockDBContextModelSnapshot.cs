@@ -47,8 +47,8 @@ namespace StockMarket.AdminAPI.Migrations
                     b.Property<string>("StockExs")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<float>("Turnover")
-                        .HasColumnType("real")
+                    b.Property<string>("Turnover")
+                        .HasColumnType("nvarchar(30)")
                         .HasMaxLength(30);
 
                     b.Property<string>("Writeup")

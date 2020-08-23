@@ -61,6 +61,20 @@ namespace StockMarket.AdminAPI.Controllers
             return Ok("Company Updated");
         }
         [HttpPost]
+        [Route("AddIPO")]
+        public IActionResult AddIPO(IPO ipo)
+        {
+            try
+            {
+                adminservice.AddIPO(ipo);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+        }
+        [HttpPost]
         [Route("UpdateIPO")]
         public IActionResult UpdateIPO(IPO ipo)
         {

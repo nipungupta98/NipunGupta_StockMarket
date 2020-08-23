@@ -47,7 +47,7 @@ namespace StockMarket.ExcelAPI
             }
 
             app.UseRouting();
-            app.UseCors("AllowMyOrigin");
+            app.UseCors("AllowOrigin");
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

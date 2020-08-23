@@ -17,14 +17,20 @@ namespace StockMarket.AdminAPI.Repositories
 
         public void AddCompany(Company company)
         {
-            dbcontext.Add(company);
+            dbcontext.Companies.Add(company);
             dbcontext.SaveChanges();
+        }
+
+        public void AddIPO(IPO ipo)
+        {
+            dbcontext.IPOs.Add(ipo);
+
         }
 
         public void DeleteCompany(string CID)
         {
             Company company = dbcontext.Companies.Find(CID);
-            dbcontext.Remove(company);
+            dbcontext.Companies.Remove(company);
             dbcontext.SaveChanges();
         }
 

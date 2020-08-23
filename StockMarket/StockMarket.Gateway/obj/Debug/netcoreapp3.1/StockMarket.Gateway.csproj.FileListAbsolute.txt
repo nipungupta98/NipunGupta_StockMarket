@@ -27,6 +27,15 @@ C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.Gatewa
 C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.Gateway\obj\Debug\netcoreapp3.1\StockMarket.Gateway.dll
 C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.Gateway\obj\Debug\netcoreapp3.1\StockMarket.Gateway.pdb
 C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.Gateway\obj\Debug\netcoreapp3.1\StockMarket.Gateway.genruntimeconfig.cache
+C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.Gateway\bin\Debug\netcoreapp3.1\EPPlus.Core.dll
+C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.Gateway\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.Gateway\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
+C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.Gateway\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.Gateway\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.Gateway\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.Gateway\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard2.0\System.Data.SqlClient.dll
+C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.Gateway\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Data.SqlClient.dll
 C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.Gateway\obj\Debug\netcoreapp3.1\StockMarket.Gateway.csproj.CoreCompileInputs.cache
 C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.Gateway\obj\Debug\netcoreapp3.1\StockMarket.Gateway.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.Gateway\obj\Debug\netcoreapp3.1\StockMarket.Gateway.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\socgend20\Desktop\NipunGupta_StockMarket\StockMarket\StockMarket.Gateway\bin\Debug\netcoreapp3.1\Ocelot1.json

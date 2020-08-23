@@ -13,6 +13,7 @@ namespace StockMarket.AdminAPI.Services
         List<Company> GetAllCompanies();
         void DeleteCompany(string CID);
         void UpdateCompany(Company company);
+        void AddIPO(IPO ipo);
         void UpdateIPO(IPO ipo);
     }
 }

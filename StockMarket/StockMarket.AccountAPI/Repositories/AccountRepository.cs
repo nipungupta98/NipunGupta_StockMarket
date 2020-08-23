@@ -16,14 +16,14 @@ namespace StockMarket.AccountAPI.Repositories
         }
         public void AddUser(User item)
         {
-            dbcontext.Add(item);
+            dbcontext.Users.Add(item);
             dbcontext.SaveChanges();
         }
 
         public void DeleteUser(string UID)
         {
             User user = dbcontext.Users.Find(UID);
-            dbcontext.Remove(user);
+            dbcontext.Users.Remove(user);
             dbcontext.SaveChanges();
         }
 

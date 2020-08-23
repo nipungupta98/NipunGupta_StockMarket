@@ -20,6 +20,11 @@ namespace StockMarket.AdminAPI.Services
             AdminRepo.AddCompany(company);
         }
 
+        public void AddIPO(IPO ipo)
+        {
+            AdminRepo.AddIPO(ipo);
+        }
+
         public void DeleteCompany(string CID)
         {
             AdminRepo.DeleteCompany(CID);
@@ -28,7 +33,6 @@ namespace StockMarket.AdminAPI.Services
         public List<Company> GetAllCompanies()
         {
             return AdminRepo.GetAllCompanies();
-
         }
 
         public Company GetCompany(string CID)
@@ -40,6 +44,7 @@ namespace StockMarket.AdminAPI.Services
         {
             AdminRepo.UpdateCompany(company);
         }
+
         public void UpdateIPO(IPO ipo)
         {
             AdminRepo.UpdateIPO(ipo);

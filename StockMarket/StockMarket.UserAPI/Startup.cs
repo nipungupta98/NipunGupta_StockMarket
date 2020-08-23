@@ -9,6 +9,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using StockMarket.UserAPI.DBAccess;
+using StockMarket.UserAPI.Repositories;
+using StockMarket.UserAPI.Services;
 
 namespace StockMarket.UserAPI
 {
@@ -24,6 +27,9 @@ namespace StockMarket.UserAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<StockDBContext>();
+            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IUserService, UserService>();
             services.AddCors(c =>
             {
                 c.AddPolicy("AllowOrigin", options =>
@@ -44,7 +50,7 @@ namespace StockMarket.UserAPI
             }
 
             app.UseRouting();
-            app.UseCors("AllowMyOrigin");
+            app.UseCors("AllowOrigin");
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
