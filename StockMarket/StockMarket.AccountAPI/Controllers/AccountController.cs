@@ -12,6 +12,9 @@ using Microsoft.Extensions.Configuration;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using System.Net;
+using System.Net.Mail;
+
 
 namespace StockMarket.AccountAPI.Controllers
 {
@@ -82,13 +85,38 @@ namespace StockMarket.AccountAPI.Controllers
             try
             {
                 accountservice.AddUser(item);
-                return Ok();
+                SendEmailConfirmation(item.Email, item.Username);
+                return Ok("Email confirmation sent");
             }
             catch(Exception e)
             {
                 return StatusCode(500, e.Message);
             }
         }
+        public void SendEmailConfirmation(string email, string uname)
+        {
+            try
+            {
+                MailMessage message = new MailMessage();
+                SmtpClient smtp = new SmtpClient();
+
+                message.From = new MailAddress("nipung1998@gmail.com");
+                message.To.Add(email);
+                message.Subject = "Greetings!! Confirmation mail.";
+                message.Body = "Thank you for registering \n" +
+                    "Your username: " + uname + "\n" + "Have a nice day!!";
+                smtp.Port = 587;
+                smtp.Host = "smtp.gmail.com";
+                smtp.EnableSsl = true;
+                smtp.UseDefaultCredentials = false;
+                //Enter your email id & password
+                smtp.Credentials = new NetworkCredential("email@gmail.com", "password");
+                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                smtp.Send(message);
+            }
+            catch (Exception) { }
+        }
+
         [HttpDelete]
         [Route("DeleteUser/{UID}")]
         public IActionResult DeleteUser(string UID)
