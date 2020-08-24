@@ -100,7 +100,10 @@ namespace StockMarket.AccountAPI.Controllers
                 MailMessage message = new MailMessage();
                 SmtpClient smtp = new SmtpClient();
 
-                message.From = new MailAddress("nipung1998@gmail.com");
+                //Enter your email id &
+                string FromEmail = "email@gmail.com";
+
+                message.From = new MailAddress(FromEmail);
                 message.To.Add(email);
                 message.Subject = "Greetings!! Confirmation mail.";
                 message.Body = "Thank you for registering \n" +
@@ -109,8 +112,8 @@ namespace StockMarket.AccountAPI.Controllers
                 smtp.Host = "smtp.gmail.com";
                 smtp.EnableSsl = true;
                 smtp.UseDefaultCredentials = false;
-                //Enter your email id & password
-                smtp.Credentials = new NetworkCredential("email@gmail.com", "password");
+                //Enter password for email account
+                smtp.Credentials = new NetworkCredential(FromEmail, "password");
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtp.Send(message);
             }
