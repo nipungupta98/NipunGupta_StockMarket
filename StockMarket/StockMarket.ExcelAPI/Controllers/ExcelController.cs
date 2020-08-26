@@ -15,7 +15,7 @@ namespace StockMarket.ExcelAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class ExcelController : ControllerBase
     {
         StockDBContext _db = new StockDBContext();

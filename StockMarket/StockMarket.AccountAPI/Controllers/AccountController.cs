@@ -100,7 +100,7 @@ namespace StockMarket.AccountAPI.Controllers
                 MailMessage message = new MailMessage();
                 SmtpClient smtp = new SmtpClient();
 
-                //Enter your email id &
+                //Enter your email id
                 string FromEmail = "email@gmail.com";
 
                 message.From = new MailAddress(FromEmail);

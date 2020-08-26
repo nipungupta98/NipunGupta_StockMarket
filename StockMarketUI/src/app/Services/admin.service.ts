@@ -19,4 +19,9 @@ export class AdminService {
   public GetCompany(CompanyCode:string):Observable<Company>{
     return this.http.get<Company>(this.path + "GetCompany/" + CompanyCode)
   }
+
+  public AddCompany(company:Company):Observable<any>
+  {
+    return this.http.post(this.path+'AddCompany',JSON.stringify(company));
+  }
 }

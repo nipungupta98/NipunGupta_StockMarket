@@ -1,1 +1,32 @@
-<p>new-company works!</p>
+<div class="form">
+    <form action = "">
+        <h2 class="text-center">New Company Registration</h2>       
+        <div class="form-group">
+            <input type="text" [(ngModel)] = "CompanyCode" class="form-control" placeholder="Company Code" required="required">
+        </div>
+        <div class="form-group">
+            <input type="text" [(ngModel)] = "CompanyName" class="form-control" placeholder="Company Name" required="required">
+        </div>
+        <div class="form-group">
+            <input type="text" [(ngModel)] = "Turnover" class="form-control" placeholder="Turnover">
+        </div>
+        <div class="form-group">
+            <input type="text" [(ngModel)] = "CEO" class="form-control" placeholder="CEO">
+        </div>
+        <div class="form-group">
+            <input type="text" [(ngModel)] = "BoardofDirectors" class="form-control" placeholder="Board of Directors">
+        </div>
+        <div class="form-group">
+            <input type="text" [(ngModel)] = "Sector" class="form-control" placeholder="Sectors">
+        </div>
+        <div class="form-group">
+            <input type="text" [(ngModel)] = "Writeup" class="form-control" placeholder="Write up">
+        </div>
+        <div class="form-group">
+            <input type="text" [(ngModel)] = "IPOID" class="form-control" placeholder="IPO ID">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block" routeLink = '/app-user-landing'>Register</button>
+        </div>
+    </form>
+</div>
