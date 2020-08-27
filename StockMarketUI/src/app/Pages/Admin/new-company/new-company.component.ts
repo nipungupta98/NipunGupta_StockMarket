@@ -22,7 +22,6 @@ export class NewCompanyComponent implements OnInit {
     IPOID;
     Writeup;
 
-
   constructor(private builder:FormBuilder,private service:AdminService) {
    }
     ngOnInit() {
@@ -49,8 +48,8 @@ export class NewCompanyComponent implements OnInit {
     this.company.Turnover=this.itemForm.value["Turnover"];
     this.company.CEO=this.itemForm.value["CEO"];
     this.company.BoardofDirectors=this.itemForm.value["BoardofDirectors"];
-    this.company.Sector = this.itemForm.value["Sector"];
-    this.company.IPOID = this.itemForm.value["IPOID"];
+    this.company.Sector=this.itemForm.value["Sector"];
+    this.company.IPOID=this.itemForm.value["IPOID"];
     this.company.Writeup=this.itemForm.value["Writeup"];
 
     console.log(this.company);
@@ -58,5 +57,4 @@ export class NewCompanyComponent implements OnInit {
       console.log('Record Added')
     })
   }
-
 }

@@ -28,7 +28,7 @@
         <thead>
             <tr>
                 <th>Company Code</th><th>Company Name</th><th>Turnover</th><th>CEO</th><th>Board of Directors</th>
-                <th>Sector</th><th>Stock Exchanges</th><th>IPOID</th><th>WriteUp</th><th></th>
+                <th>Sector</th><th>Stock Exchanges</th><th>IPOID</th><th>WriteUp</th><th></th><th></th>
             </tr>
         </thead>
         <tbody>
@@ -43,8 +43,9 @@
                 <td>{{com.IPOID}}</td>
                 <td>{{com.Writeup}}</td>
                 <td><a routerLink="/app-update-company">Edit</a></td>
+                <td><a routerLink="/app-delete-company">Delete</a></td>
             </tr>
         </tbody>
     </table>
-    <p class="text-center"><a routerLink = "/app-new-company"></a>Add new company</p>
+    <p class = "text-center"><a routerLink="/app-new-company">Add new company</a></p>
 </div>

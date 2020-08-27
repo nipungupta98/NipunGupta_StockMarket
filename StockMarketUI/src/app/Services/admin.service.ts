@@ -22,6 +22,6 @@ export class AdminService {
 
   public AddCompany(company:Company):Observable<any>
   {
-    return this.http.post(this.path+'AddCompany',JSON.stringify(company));
+    return this.http.post(this.path+'AddCompany',company);
   }
 }

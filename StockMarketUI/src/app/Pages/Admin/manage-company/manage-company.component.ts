@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {AdminService} from '../../../Services/admin.service'
 import {Company} from '../../../Models/company'
 import { FormBuilder,FormGroup } from "@angular/forms";
+import {NgModule} from'@angular/core';
 
 
 @Component({
@@ -12,15 +13,14 @@ import { FormBuilder,FormGroup } from "@angular/forms";
 export class ManageCompanyComponent implements OnInit {
 
   Companies:Company[]
-  company:Company;
-  itemForm:FormGroup;
 
-  constructor(private adminservice:AdminService, private builder:FormBuilder) {
+  constructor(private adminservice:AdminService) {
+    
+   }
+  ngOnInit(): void {
     this.adminservice.GetAllCompanies().subscribe(com=>{
       this.Companies = com;
       console.log(this.Companies)
     })
-   }
-  ngOnInit(): void {
   }
 }
