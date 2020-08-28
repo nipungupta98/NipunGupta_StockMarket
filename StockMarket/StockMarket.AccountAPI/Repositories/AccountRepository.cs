@@ -16,6 +16,18 @@ namespace StockMarket.AccountAPI.Repositories
         }
         public void AddUser(User item)
         {
+            int len = dbcontext.Users.Count();
+            item.UserID = (len + 1).ToString();
+            item.Confirmed = "User";
+            dbcontext.Users.Add(item);
+            dbcontext.SaveChanges();
+        }
+
+        public void AddUserAdmin(User item)
+        {
+            int len = dbcontext.Users.Count();
+            item.UserID = (len + 1).ToString();
+            item.Confirmed = "Admin";
             dbcontext.Users.Add(item);
             dbcontext.SaveChanges();
         }

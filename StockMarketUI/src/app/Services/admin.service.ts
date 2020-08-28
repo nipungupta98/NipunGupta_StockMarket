@@ -16,12 +16,18 @@ export class AdminService {
     return this.http.get<Company[]>(this.path + "GetAllCompanies")
   }
 
-  public GetCompany(CompanyCode:string):Observable<Company>{
+  public GetCompany(CompanyCode:string):Observable<Company>
+  {
     return this.http.get<Company>(this.path + "GetCompany/" + CompanyCode)
   }
 
   public AddCompany(company:Company):Observable<any>
   {
     return this.http.post(this.path+'AddCompany',company);
+  }
+
+  public DeleteCompany(CompanyCode:string):Observable<any>
+  {
+    return this.http.delete(this.path + 'DeleteCompany/' + CompanyCode);
   }
 }

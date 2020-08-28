@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <a class="navbar-brand">Stock Market</a>
+    <a class="navbar-brand" routerLink = '/app-admin-landing'>Stock Market</a>
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -10,14 +10,14 @@
           <a class="nav-link" >Manage Company</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/ImportStock">Import Data</a>
+          <a class="nav-link" routerLink="/app-import-stock">Import Data</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/UpdateIPO">Update IPO details</a>
+          <a class="nav-link" routerLink="/app-update-ipo">Update IPO details</a>
       </ul>
-      <ul class = "nav nav-pills pull right">
+      <ul class = "navbar-nav pull right">
         <li class = "nav-item">
-          <a class = "nav-link" routerLink = "/app-admin-login">Logout</a>
+          <button class = "btn btn-primary" type = "button" (click) = "logout()">Logout</button>
         </li>
       </ul>
     </div>
@@ -25,25 +25,24 @@
 
 <div class = "container">
     <table class = "table table-bordered table-hover">
-        <thead>
+        <thead class = "thead-light">
             <tr>
                 <th>Company Code</th><th>Company Name</th><th>Turnover</th><th>CEO</th><th>Board of Directors</th>
-                <th>Sector</th><th>Stock Exchanges</th><th>IPOID</th><th>WriteUp</th><th></th><th></th>
+                <th>Sector</th><th>Stock Exchanges</th><th>IPOID</th><th>WriteUp</th><th></th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor = "let com of Companies">
-                <td>{{com.CompanyCode}}</td>
-                <td>{{com.CompanyName}}</td>
-                <td>{{com.Turnover}}</td>
-                <td>{{com.CEO}}</td>
-                <td>{{com.BoardofDirectors}}</td>
-                <td>{{com.Sector}}</td>
-                <td>{{com.StockExs}}</td>
-                <td>{{com.IPOID}}</td>
-                <td>{{com.Writeup}}</td>
-                <td><a routerLink="/app-update-company">Edit</a></td>
-                <td><a routerLink="/app-delete-company">Delete</a></td>
+                <td>{{com.companyCode}}</td>
+                <td>{{com.companyName}}</td>
+                <td>{{com.turnover}}</td>
+                <td>{{com.ceo}}</td>
+                <td>{{com.boardofDirectors}}</td>
+                <td>{{com.sector}}</td>
+                <td>{{com.stockExs}}</td>
+                <td>{{com.ipoid}}</td>
+                <td>{{com.writeup}}</td>
+                <td><button class = "btn btn-primary btn-block" (click) = "Delete(com.companyCode)"> Delete</button></td>
             </tr>
         </tbody>
     </table>

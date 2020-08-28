@@ -14,6 +14,12 @@ namespace StockMarket.AccountAPI.Services
         {
             accountRepository = repo;
         }
+
+        public void AddAdmin(User item)
+        {
+            accountRepository.AddUserAdmin(item);
+        }
+
         public void AddUser(User item)
         {
             accountRepository.AddUser(item);

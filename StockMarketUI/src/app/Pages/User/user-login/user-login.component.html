@@ -1,14 +1,16 @@
 <div class="login-form">
-    <form>
+    <form [formGroup] = "itemForm">
         <h2 class="text-center">User Log in</h2>       
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Username" required="required">
+            <input type="text" [(ngModel)] = "Username" class="form-control" 
+            formControlName = "Username" placeholder="Username" required="required">
         </div>
         <div class="form-group">
-            <input type="password" class="form-control" placeholder="Password" required="required">
+            <input type="password" [(ngModel)] = "Password" class="form-control" 
+            formControlName = "Password" placeholder="Password" required="required">
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block" routerLink = 'app-user-landing'>Log in</button>
+            <button type="submit" class="btn btn-primary btn-block" (click) = "Validate()">Log in</button>
         </div>  
     </form>
     <p class="text-center"><a routerLink = "/app-signup">Create an Account</a></p>

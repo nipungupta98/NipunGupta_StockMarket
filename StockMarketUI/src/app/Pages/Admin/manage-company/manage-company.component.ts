@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AdminService} from '../../../Services/admin.service'
 import {Company} from '../../../Models/company'
-import { FormBuilder,FormGroup } from "@angular/forms";
-import {NgModule} from'@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,15 +11,34 @@ import {NgModule} from'@angular/core';
 })
 export class ManageCompanyComponent implements OnInit {
 
-  Companies:Company[]
+  Companies:Company[];
+  com:Company;
 
-  constructor(private adminservice:AdminService) {
+  constructor(private adminservice:AdminService, private router:Router) {
     
    }
-  ngOnInit(): void {
+  ngOnInit(): void 
+  {
+    this.GetAll()
+  }
+
+  logout(){
+    localStorage.clear()
+    this.router.navigateByUrl('/app-home')
+  }
+
+  GetAll(){
     this.adminservice.GetAllCompanies().subscribe(com=>{
       this.Companies = com;
       console.log(this.Companies)
     })
   }
+  Delete(CompanyCode:string)
+  {
+  this.adminservice.DeleteCompany(CompanyCode).subscribe(res=>{
+    console.log('Record deleted');
+    window.location.reload();
+    this.router.navigateByUrl("/app-manage-company")
+  })
+}
 }

@@ -25,9 +25,9 @@ namespace StockMarket.AdminAPI.Services
             AdminRepo.AddIPO(ipo);
         }
 
-        public void DeleteCompany(string CID)
+        public void DeleteCompany(string CompanyCode)
         {
-            AdminRepo.DeleteCompany(CID);
+            AdminRepo.DeleteCompany(CompanyCode);
         }
 
         public List<Company> GetAllCompanies()

@@ -1,0 +1,10 @@
+.btn {
+width:fit-content;
+text-align: center;
+position:relative;
+}
+
+.form-group{
+    width: 800px;
+    border-block: 2px;
+}

@@ -8,7 +8,9 @@ namespace StockMarket.AccountAPI.Repositories
 {
     public interface IAccountRepository
     {
+        void AddUserAdmin(User item);
         void AddUser(User item);
+
         User Validate(string uname, string pwd);
         User GetUser(string UID);
         List<User> GetAllUsers();

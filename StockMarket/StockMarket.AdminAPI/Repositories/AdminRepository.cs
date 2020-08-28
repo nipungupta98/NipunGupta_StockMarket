@@ -27,9 +27,9 @@ namespace StockMarket.AdminAPI.Repositories
 
         }
 
-        public void DeleteCompany(string CID)
+        public void DeleteCompany(string CompanyCode)
         {
-            Company company = dbcontext.Companies.Find(CID);
+            Company company = dbcontext.Companies.Find(CompanyCode);
             dbcontext.Companies.Remove(company);
             dbcontext.SaveChanges();
         }

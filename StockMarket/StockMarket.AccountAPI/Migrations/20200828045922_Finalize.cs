@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace StockMarket.AccountAPI.Migrations
 {
-    public partial class finalize : Migration
+    public partial class Finalize : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,10 +12,29 @@ namespace StockMarket.AccountAPI.Migrations
 
             migrationBuilder.DropTable(
                 name: "Company");
+
+            migrationBuilder.DropColumn(
+                name: "Confirmed",
+                table: "User");
+
+            migrationBuilder.AddColumn<string>(
+                name: "Role",
+                table: "User",
+                nullable: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropColumn(
+                name: "Role",
+                table: "User");
+
+            migrationBuilder.AddColumn<string>(
+                name: "Confirmed",
+                table: "User",
+                type: "nvarchar(max)",
+                nullable: true);
+
             migrationBuilder.CreateTable(
                 name: "Company",
                 columns: table => new

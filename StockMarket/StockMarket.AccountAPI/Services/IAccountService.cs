@@ -9,6 +9,7 @@ namespace StockMarket.AccountAPI.Services
     public interface IAccountService
     {
         void AddUser(User item);
+        void AddAdmin(User item);
         User Validate(string uname, string pwd);
         User GetUser(string UID);
         List<User> GetAllUsers();

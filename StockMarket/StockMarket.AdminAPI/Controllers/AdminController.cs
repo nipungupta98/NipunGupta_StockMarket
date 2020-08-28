@@ -36,10 +36,10 @@ namespace StockMarket.AdminAPI.Controllers
             }
         }
         [HttpDelete]
-        [Route("DeleteCompany/{CID}")]
-        public IActionResult DeleteCompany(string CID)
+        [Route("DeleteCompany/{CompanyCode}")]
+        public IActionResult DeleteCompany(string CompanyCode)
         {
-            adminservice.DeleteCompany(CID);
+            adminservice.DeleteCompany(CompanyCode);
             return Ok("Record Delete");
         }
         [HttpGet]

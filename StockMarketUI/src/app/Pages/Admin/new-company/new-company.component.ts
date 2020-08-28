@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Company } from '../../../Models/company';
 import { FormBuilder,FormGroup } from "@angular/forms";
 import { AdminService} from '../../../Services/admin.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-company',
@@ -22,7 +23,7 @@ export class NewCompanyComponent implements OnInit {
     IPOID;
     Writeup;
 
-  constructor(private builder:FormBuilder,private service:AdminService) {
+  constructor(private builder:FormBuilder,private service:AdminService, private router:Router) {
    }
     ngOnInit() {
       this.itemForm=this.builder.group({
@@ -37,9 +38,11 @@ export class NewCompanyComponent implements OnInit {
         Writeup:['']
       });
     }
-    onSubmit() {
-      this.Add();
-  }
+    logout()
+    {
+      localStorage.clear()
+      this.router.navigateByUrl('/app-home')
+    }
   Add()
   {
     this.company=new Company();
@@ -48,6 +51,7 @@ export class NewCompanyComponent implements OnInit {
     this.company.Turnover=this.itemForm.value["Turnover"];
     this.company.CEO=this.itemForm.value["CEO"];
     this.company.BoardofDirectors=this.itemForm.value["BoardofDirectors"];
+    this.company.StockExs = this.itemForm.value["StockExs"];
     this.company.Sector=this.itemForm.value["Sector"];
     this.company.IPOID=this.itemForm.value["IPOID"];
     this.company.Writeup=this.itemForm.value["Writeup"];
@@ -56,5 +60,7 @@ export class NewCompanyComponent implements OnInit {
     this.service.AddCompany(this.company).subscribe(res=>{
       console.log('Record Added')
     })
+
+    this.router.navigateByUrl('/app-manage-company')
   }
 }

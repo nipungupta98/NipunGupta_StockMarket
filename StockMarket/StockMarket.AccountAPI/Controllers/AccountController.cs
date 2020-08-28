@@ -15,7 +15,6 @@ using System.Text;
 using System.Net;
 using System.Net.Mail;
 
-
 namespace StockMarket.AccountAPI.Controllers
 {
     [Route("api/[controller]")]
@@ -31,14 +30,14 @@ namespace StockMarket.AccountAPI.Controllers
 
         }
         [HttpGet]
-        [Route("Validate/{uname}/{pwd}")]
-        public IActionResult Validate(string uname, string pwd)
+        [Route("ValidateUser/{uname}/{pwd}")]
+        public IActionResult ValidateUser(string uname, string pwd)
         {
 
             User user = accountservice.Validate(uname, pwd);
             try
             {
-                if (user == null)
+                if (user == null || user.Confirmed!="User")
                 {
                     return Content("Invalid user");
                 }
@@ -46,6 +45,26 @@ namespace StockMarket.AccountAPI.Controllers
                     return Ok(generateJWToken(uname));
             }
             catch(Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+        }
+        [HttpGet]
+        [Route("ValidateAdmin/{uname}/{pwd}")]
+        public IActionResult ValidateAdmin(string uname, string pwd)
+        {
+
+            User user = accountservice.Validate(uname, pwd);
+            try
+            {
+                if (user == null || user.Confirmed!= "Admin")
+                {
+                    return Content("Invalid user");
+                }
+                else
+                    return Ok(generateJWToken(uname));
+            }
+            catch (Exception e)
             {
                 return StatusCode(500, e.Message);
             }
@@ -73,8 +92,8 @@ namespace StockMarket.AccountAPI.Controllers
 
             var response = new Token
             {
-                uname = uname,
-                jwtoken = new JwtSecurityTokenHandler().WriteToken(token)
+                Username = uname,
+                token = new JwtSecurityTokenHandler().WriteToken(token)
             };
             return response;
         }
@@ -86,9 +105,24 @@ namespace StockMarket.AccountAPI.Controllers
             {
                 accountservice.AddUser(item);
                 SendEmailConfirmation(item.Email, item.Username);
-                return Ok("Email confirmation sent");
+                return Ok(generateJWToken(item.Username));
             }
             catch(Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+        }
+        [HttpPost]
+        [Route("AddAdmin")]
+        public IActionResult AddAdmin(User item)
+        {
+            try
+            {
+                accountservice.AddAdmin(item);
+                SendEmailConfirmation(item.Email, item.Username);
+                return Ok(generateJWToken(item.Username));
+            }
+            catch (Exception e)
             {
                 return StatusCode(500, e.Message);
             }

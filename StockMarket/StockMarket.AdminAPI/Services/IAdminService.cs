@@ -11,7 +11,7 @@ namespace StockMarket.AdminAPI.Services
         void AddCompany(Company company);
         Company GetCompany(string CID);
         List<Company> GetAllCompanies();
-        void DeleteCompany(string CID);
+        void DeleteCompany(string CompanyCode);
         void UpdateCompany(Company company);
         void AddIPO(IPO ipo);
         void UpdateIPO(IPO ipo);

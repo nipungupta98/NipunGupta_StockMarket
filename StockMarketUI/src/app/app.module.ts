@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { ReactiveFormsModule, FormsModule } from'@angular/forms';
+import {AuthInterceptor} from './auth-interceptor';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,9 @@ import { AccountService } from'./Services/account.service';
 import { UpdateIPOComponent } from './Pages/Admin/update-ipo/update-ipo.component';
 import { UpdateCompanyComponent } from './Pages/Admin/update-company/update-company.component';
 import { RouterModule } from '@angular/router';
+import { GetipoComponent } from './Pages/User/getipo/getipo.component';
+import { HomeComponent } from './Pages/home/home.component';
+import { NotFoundComponent } from './Pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,10 @@ import { RouterModule } from '@angular/router';
     UserLandingComponent,
     UserLoginComponent,
     UpdateIPOComponent,
-    UpdateCompanyComponent
+    UpdateCompanyComponent,
+    GetipoComponent,
+    HomeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +54,11 @@ import { RouterModule } from '@angular/router';
     FormsModule
   ],
   exports:[ RouterModule ],
-  providers: [AdminService, UserService, ExcelService, AccountService],
+  providers: [AdminService, UserService, ExcelService, AccountService
+    , {
+    provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true
+  }
+],
   bootstrap: [AppComponent]
 })
 export class AppModule {  }

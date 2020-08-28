@@ -7,7 +7,7 @@ namespace StockMarket.AccountAPI
 {
     public class Token
     {
-        public string uname { get; set; }
-        public string jwtoken { get; set; }
+        public string Username { get; set; }
+        public string token { get; set; }
     }
 }

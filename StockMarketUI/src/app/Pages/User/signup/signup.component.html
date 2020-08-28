@@ -1,20 +1,24 @@
 <div class="form">
-    <form action = "">
+    <form [formGroup] = "itemForm" (ngSubmit) = "onSubmit()">
         <h2 class="text-center">User Sign up</h2>       
         <div class="form-group">
-            <input type="text" [(ngModel)] = "Username" class="form-control" placeholder="Username" required="required">
+            <input type="text" [(ngModel)] = "Username" 
+            formControlName = "Username"class="form-control" placeholder="Username" required="required">
         </div>
         <div class="form-group">
-            <input type="password" [(ngModel)] = "Password" class="form-control" placeholder="Password" required="required">
+            <input type="password" [(ngModel)] = "Password" 
+            formControlName = "Password" class="form-control" placeholder="Password" required="required">
         </div>
         <div class="form-group">
-            <input type="Email" [(ngModel)] = "Email" class="form-control" placeholder="Email@gmail.com" required="required">
+            <input type="text" [(ngModel)] = "Email" 
+            formControlName = "Email" class="form-control" placeholder="Email">
         </div>
         <div class="form-group">
-            <input type="text" [(ngModel)] = "Mobile" class="form-control" placeholder="Mobile No.">
+            <input type="text" [(ngModel)] = "Mobile" 
+            formControlName = "Mobile" class="form-control" placeholder="Mobile">
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block" routeLink = '/app-user-landing'>Sign up</button>
+            <button type="submit" class="btn btn-primary btn-block" (click)=Add() >Sign up</button>
         </div>
     </form>
 </div>
