@@ -18,7 +18,7 @@ export class SignupComponent implements OnInit {
   Email;
   Mobile;
   itemForm:FormGroup
-  constructor(private builder:FormBuilder,private accountservice:AccountService,  private router:Router) {
+  constructor(private builder:FormBuilder, private accountservice:AccountService, private router:Router) {
   }
   ngOnInit(): void {
     this.itemForm=this.builder.group({
@@ -48,6 +48,5 @@ export class SignupComponent implements OnInit {
     })
 
     this.router.navigateByUrl('/app-user-landing');
-
   }
 }

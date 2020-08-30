@@ -1,1 +1,47 @@
-<p>getipo works!</p>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand">Stock Market</a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse" id="navbarsExampleDefault" style>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link active" routerLink="/app-getipo">IPOs</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/app-chart">Show chart</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/app-comparison-charts">Compare Company</a>
+        </li>
+      </ul>
+      <ul>
+        <li class="nav nav-pills pull right" id = "logout">
+            <a class = "nav-link" (click) = "logout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div class = "container">
+    <table class = "table table-bordered table-hover">
+        <thead class = "thead-light">
+            <tr>
+                <th>Company Name</th><th>Price Per Share</th><th>Stock Exchanges</th><th>Total Shares</th>
+                <th>Open Time</th><th>Remarks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let ipo of IPOs">
+                <td>{{ipo.companyName}}</td>
+                <td>{{ipo.pricePerS}}</td>
+                <td>{{ipo.stockExs}}</td>
+                <td>{{ipo.totalShares}}</td>
+                <td>{{ipo.openTime}}</td>
+                <td>{{ipo.remarks}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class = "text-center"><a routerLink="/app-new-ipo">Add new company</a></p>
+</div>

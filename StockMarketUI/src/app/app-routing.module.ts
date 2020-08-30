@@ -10,6 +10,7 @@ import { NewCompanyComponent } from './Pages/Admin/new-company/new-company.compo
 import {ChartComponent} from '../app/Pages/User/chart/chart.component';
 import {ComparisonChartsComponent} from './Pages/User/comparison-charts/comparison-charts.component';
 import {GetipoComponent} from './Pages/User/getipo/getipo.component';
+import {NewIPOComponent} from '../app/Pages/Admin/new-ipo/new-ipo.component'
 import {ImportStockComponent} from './Pages/Admin/import-stock/import-stock.component';
 import {HomeComponent} from '../app/Pages/home/home.component';
 import {NotFoundComponent} from '../app/Pages/not-found/not-found.component'
@@ -20,11 +21,13 @@ const routes: Routes = [
   {path: 'app-manage-company', component:ManageCompanyComponent, canActivate:[AuthGuard]},
   {path: 'app-user-login', component:UserLoginComponent},
   {path: 'app-admin-login', component:AdminLoginComponent},
-  {path: 'app-signup', component:SignupComponent},
+  {path: 'app-signup', component:SignupComponent, 
+  children:[{path:'app-user-landing', component: UserLandingComponent}]},
   {path: 'app-admin-landing',component:AdminLandingComponent, canActivate:[AuthGuard]},
   {path: 'app-user-landing', component:UserLandingComponent, canActivate:[AuthGuard]},
   {path: 'app-new-company', component:NewCompanyComponent, canActivate:[AuthGuard]},
   {path: 'app-chart', component:ChartComponent, canActivate:[AuthGuard]},
+  {path: 'app-new-ipo', component:NewIPOComponent, canActivate:[AuthGuard]},
   {path: 'app-comparison-charts', component:ComparisonChartsComponent, canActivate:[AuthGuard]},
   {path: 'app-getipo', component:GetipoComponent, canActivate:[AuthGuard]},
   {path: 'app-import-stock', component: ImportStockComponent, canActivate:[AuthGuard]},

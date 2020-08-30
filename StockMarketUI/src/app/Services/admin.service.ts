@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import {Company} from '../Models/company'
+import {IPO} from '../Models/ipo'
 
 @Injectable({
   providedIn: 'root'
@@ -29,5 +30,13 @@ export class AdminService {
   public DeleteCompany(CompanyCode:string):Observable<any>
   {
     return this.http.delete(this.path + 'DeleteCompany/' + CompanyCode);
+  }
+  public GetAllIPOs():Observable<IPO[]>
+  {
+    return this.http.get<IPO[]>(this.path+"GetAllIPOs")
+  }
+  public AddIPO(ipo:IPO):Observable<any>
+  {
+    return this.http.post(this.path+'AddIPO', ipo)
   }
 }

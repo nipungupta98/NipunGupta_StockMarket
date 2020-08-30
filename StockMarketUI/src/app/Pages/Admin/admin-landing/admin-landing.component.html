@@ -13,13 +13,21 @@
           <a class="nav-link" routerLink="/app-import-stock">Import Data</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/UpdateIPO">Update IPO details</a>
+          <a class="nav-link" routerLink="/app-update-ipo">Update IPO details</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/app-new-ipo">New IPO</a>
         </li>
       </ul>
       <ul>
         <li class="nav nav-pills pull right" id = "logout">
-            <a class = "nav-link" ng-click = "logout()">Logout</a>
+            <a class = "nav-link" (click) = "logout()">Logout</a>
         </li>
       </ul>
     </div>
   </nav>
+<div id="main">
+    <div class="fof">
+            <h1>Welcome Admin!</h1>
+    </div>
+</div>

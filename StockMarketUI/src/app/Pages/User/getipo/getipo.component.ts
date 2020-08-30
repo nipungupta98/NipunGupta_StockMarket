@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminService } from 'src/app/Services/admin.service';
+import { IPO } from 'src/app/Models/ipo';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-getipo',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GetipoComponent implements OnInit {
 
-  constructor() { }
+  IPOs:IPO[];
+  ipo:IPO;
+
+  constructor(private adminservice: AdminService, private router:Router) {
+   }
 
   ngOnInit(): void {
+    this.GetAllIPOs()
   }
 
+  logout(){
+    localStorage.clear()
+    this.router.navigateByUrl('/app-home');
+  }
+  GetAllIPOs(){
+    this.adminservice.GetAllIPOs().subscribe(res=>{
+      this.IPOs = res;
+      console.log(this.IPOs)
+    })
+  }
 }

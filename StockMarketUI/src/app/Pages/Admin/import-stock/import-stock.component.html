@@ -9,22 +9,25 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/app-manage-company">Manage Company</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active" >
           <a class="nav-link" routerLink="/app-import-stock">Import Data</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/UpdateIPO">Update IPO details</a>
+          <a class="nav-link" routerLink="/app-update-ipo">Update IPO details</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/app-new-ipo">New IPO</a>
         </li>
       </ul>
       <ul>
         <li class="nav nav-pills pull right" id = "logout">
-            <a class = "nav-link" ng-click = "logout()">Logout</a>
+            <a class = "nav-link" (click) = "logout()">Logout</a>
         </li>
       </ul>
     </div>
  </nav>
 
- <div class="form">
+ <div class="form-inline">
     <form [formGroup] = "itemForm" (ngSubmit) = "onSubmit()">    
         <div class="form-group" [formGroup] = "itemForm">
             <input type="text" [(ngModel)] = "FileLink" formG

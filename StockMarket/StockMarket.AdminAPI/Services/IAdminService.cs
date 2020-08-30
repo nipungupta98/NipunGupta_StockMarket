@@ -15,5 +15,6 @@ namespace StockMarket.AdminAPI.Services
         void UpdateCompany(Company company);
         void AddIPO(IPO ipo);
         void UpdateIPO(IPO ipo);
+        List<IPO> GetIPOs();
     }
 }

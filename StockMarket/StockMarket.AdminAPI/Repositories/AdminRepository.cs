@@ -23,8 +23,8 @@ namespace StockMarket.AdminAPI.Repositories
 
         public void AddIPO(IPO ipo)
         {
+            ipo.IPOID = (dbcontext.IPOs.Count() + 1).ToString();
             dbcontext.IPOs.Add(ipo);
-
         }
 
         public void DeleteCompany(string CompanyCode)
@@ -56,6 +56,10 @@ namespace StockMarket.AdminAPI.Repositories
         {
             dbcontext.IPOs.Update(ipo);
             dbcontext.SaveChanges();
+        }
+        public List<IPO> GetAllIPOs()
+        {
+            return dbcontext.IPOs.ToList();
         }
     }
 }

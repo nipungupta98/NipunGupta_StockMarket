@@ -37,6 +37,7 @@ export class ManageCompanyComponent implements OnInit {
   {
   this.adminservice.DeleteCompany(CompanyCode).subscribe(res=>{
     console.log('Record deleted');
+    window.alert("Company Deleted")
     window.location.reload();
     this.router.navigateByUrl("/app-manage-company")
   })

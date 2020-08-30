@@ -15,9 +15,12 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/app-update-ipo">Update IPO details</a>
       </ul>
-      <ul class = "navbar-nav pull right">
-        <li class = "nav-item">
-          <button class = "btn btn-primary" type = "button" (click) = "logout()">Logout</button>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/app-new-ipo">New IPO</a>
+      </li>
+      <ul>
+        <li class="nav nav-pills pull right" id = "logout">
+            <a class = "nav-link" (click) = "logout()">Logout</a>
         </li>
       </ul>
     </div>

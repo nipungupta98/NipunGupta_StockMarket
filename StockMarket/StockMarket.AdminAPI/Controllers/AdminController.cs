@@ -84,5 +84,13 @@ namespace StockMarket.AdminAPI.Controllers
             adminservice.UpdateIPO(ipo);
             return Ok("IPO updated");
         }
+
+        [HttpGet]
+        [Route("GetAllIPOs")]
+        public IActionResult GetAllIPOs()
+        {
+            List<IPO> IPOs = adminservice.GetIPOs();
+            return Ok(IPOs);
+        }
     }
 }

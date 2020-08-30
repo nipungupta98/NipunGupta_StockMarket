@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ErrorInterceptor} from "./error-interceptor";
 import { ReactiveFormsModule, FormsModule } from'@angular/forms';
 import {AuthInterceptor} from './auth-interceptor';
 
@@ -26,6 +27,7 @@ import { RouterModule } from '@angular/router';
 import { GetipoComponent } from './Pages/User/getipo/getipo.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { NotFoundComponent } from './Pages/not-found/not-found.component';
+import { NewIPOComponent } from './Pages/Admin/new-ipo/new-ipo.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { NotFoundComponent } from './Pages/not-found/not-found.component';
     UpdateCompanyComponent,
     GetipoComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    NewIPOComponent,
+    GetipoComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +59,11 @@ import { NotFoundComponent } from './Pages/not-found/not-found.component';
   ],
   exports:[ RouterModule ],
   providers: [AdminService, UserService, ExcelService, AccountService
-    , {
+    ,{
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorInterceptor,
+      multi: true
+    }, {
     provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true
   }
 ],

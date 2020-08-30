@@ -61,6 +61,10 @@ export class NewCompanyComponent implements OnInit {
       console.log('Record Added')
     })
 
+    window.alert(`Summary:\n 
+    Company Code: ${this.company.CompanyCode}\n
+    Company Name: ${this.CompanyName}`)
+
     this.router.navigateByUrl('/app-manage-company')
   }
 }

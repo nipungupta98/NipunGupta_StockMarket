@@ -40,6 +40,11 @@ namespace StockMarket.AdminAPI.Services
             return AdminRepo.GetCompany(CID);
         }
 
+        public List<IPO> GetIPOs()
+        {
+            return AdminRepo.GetAllIPOs();
+        }
+
         public void UpdateCompany(Company company)
         {
             AdminRepo.UpdateCompany(company);

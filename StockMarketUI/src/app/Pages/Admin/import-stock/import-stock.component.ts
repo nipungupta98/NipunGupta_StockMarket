@@ -38,6 +38,12 @@ export class ImportStockComponent implements OnInit {
       this.excelservice.ImportStock(this.FileLink).subscribe(res=>{
         this.StockPriceData = res;
         console.log(res)
+
+        window.alert(`Summary of import:\n
+        Company Code: ${res[0].CompanyCode}\n
+        Number of Records: ${res.length}\n
+        Stock Exchange: ${res[0].CompanyName}\n
+        From: ${res[0].Date} to ${res[res.length-1].Date}`)
     })
   }
 }
