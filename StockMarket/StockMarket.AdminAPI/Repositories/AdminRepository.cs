@@ -25,6 +25,7 @@ namespace StockMarket.AdminAPI.Repositories
         {
             ipo.IPOID = (dbcontext.IPOs.Count() + 1).ToString();
             dbcontext.IPOs.Add(ipo);
+            dbcontext.SaveChanges();
         }
 
         public void DeleteCompany(string CompanyCode)
