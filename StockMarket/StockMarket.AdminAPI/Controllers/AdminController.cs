@@ -56,7 +56,7 @@ namespace StockMarket.AdminAPI.Controllers
             List<Company> company = adminservice.GetAllCompanies();
             return Ok(company);
         }
-        [HttpPost]
+        [HttpPut]
         [Route("UpdateCompany")]
         public IActionResult UpdateCompany(Company company)
         {
@@ -77,7 +77,7 @@ namespace StockMarket.AdminAPI.Controllers
                 return StatusCode(500, e.Message);
             }
         }
-        [HttpPost]
+        [HttpPut]
         [Route("UpdateIPO")]
         public IActionResult UpdateIPO(IPO ipo)
         {

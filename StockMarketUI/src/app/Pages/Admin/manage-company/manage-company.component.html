@@ -32,7 +32,7 @@
         <thead class = "thead-light">
             <tr>
                 <th>Company Code</th><th>Company Name</th><th>Turnover</th><th>CEO</th><th>Board of Directors</th>
-                <th>Sector</th><th>Stock Exchanges</th><th>IPOID</th><th>WriteUp</th><th></th>
+                <th>Sector</th><th>Stock Exchanges</th><th>IPOID</th><th>WriteUp</th><th></th><th></th>
             </tr>
         </thead>
         <tbody>
@@ -47,6 +47,7 @@
                 <td>{{com.ipoid}}</td>
                 <td>{{com.writeup}}</td>
                 <td><button class = "btn btn-primary btn-block" (click) = "Delete(com.companyCode)"> Delete</button></td>
+                <td><button class = "btn btn-primary btn-block" (click) = "Update(com.companyCode)"> Edit</button></td>
             </tr>
         </tbody>
     </table>

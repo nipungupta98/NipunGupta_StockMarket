@@ -39,4 +39,8 @@ export class AdminService {
   {
     return this.http.post(this.path+'AddIPO', ipo)
   }
+  public UpdateCompany(company:Company):Observable<any>
+  {
+    return this.http.put<any>(this.path+'UpdateCompany', company)
+  }
 }

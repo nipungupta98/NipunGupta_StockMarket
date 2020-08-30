@@ -42,4 +42,9 @@ export class ManageCompanyComponent implements OnInit {
     this.router.navigateByUrl("/app-manage-company")
   })
 }
+Update(CompanyCode:string)
+{
+  localStorage.setItem('CompanyCode', CompanyCode);
+  this.router.navigateByUrl('app-update-company')
+}
 }
