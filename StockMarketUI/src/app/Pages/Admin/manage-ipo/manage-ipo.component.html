@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink = '/app-admin-landing'>Stock Market</a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse" id="navbarsExampleDefault" style>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink = "/app-manage-company" >Manage Company</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/app-import-stock">Import Data</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/app-manage-ipo">Manage IPO</a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/app-new-ipo">New IPO</a>
+          </li>
+      </ul>
+      <ul>
+        <li class="nav nav-pills pull right" id = "logout">
+            <a class = "nav-link" (click) = "logout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+<div class = "container">
+    <table class = "table table-bordered table-hover">
+        <thead class = "thead-light">
+            <tr>
+                <th hidden>IPO ID</th><th>Company Name</th><th>Price Per Share</th><th>Stock Exchanges</th><th>Total Shares</th>
+                <th>Open Time</th><th>Remarks</th><th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let ipo of IPOs">
+                <td hidden>{{ipo.ipoid}}</td>
+                <td>{{ipo.companyName}}</td>
+                <td>{{ipo.pricePerS}}</td>
+                <td>{{ipo.stockExs}}</td>
+                <td>{{ipo.totalShares}}</td>
+                <td>{{ipo.openTime}}</td>
+                <td>{{ipo.remarks}}</td>
+                <td><button class = "btn btn-primary btn-block" (click) = "Update(ipo.ipoid, ipo.companyName)"> Edit</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

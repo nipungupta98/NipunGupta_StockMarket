@@ -17,6 +17,7 @@ import {NotFoundComponent} from '../app/Pages/not-found/not-found.component'
 import {AuthGuard} from '../../src/app/Services/auth.guard';
 import { UpdateCompanyComponent } from './Pages/Admin/update-company/update-company.component';
 import { UpdateIPOComponent } from './Pages/Admin/update-ipo/update-ipo.component';
+import {ManageIPOComponent} from '../app/Pages/Admin/manage-ipo/manage-ipo.component'
 
 const routes: Routes = [
   {path: '',   redirectTo: '/app-home', pathMatch: 'full' },
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path: 'app-update-ipo', component:UpdateIPOComponent, canActivate:[AuthGuard]},
   {path: 'app-comparison-charts', component:ComparisonChartsComponent, canActivate:[AuthGuard]},
   {path: 'app-getipo', component:GetipoComponent, canActivate:[AuthGuard]},
+  {path:'app-manage-ipo', component:ManageIPOComponent, canActivate:[AuthGuard]},
   {path: 'app-import-stock', component: ImportStockComponent, canActivate:[AuthGuard]},
   {path: 'app-home', component:HomeComponent},
   {path: '**', component: NotFoundComponent}

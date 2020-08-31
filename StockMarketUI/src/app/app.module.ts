@@ -28,6 +28,7 @@ import { GetipoComponent } from './Pages/User/getipo/getipo.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { NotFoundComponent } from './Pages/not-found/not-found.component';
 import { NewIPOComponent } from './Pages/Admin/new-ipo/new-ipo.component';
+import { ManageIPOComponent } from './Pages/Admin/manage-ipo/manage-ipo.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { NewIPOComponent } from './Pages/Admin/new-ipo/new-ipo.component';
     HomeComponent,
     NotFoundComponent,
     NewIPOComponent,
-    GetipoComponent
+    GetipoComponent,
+    ManageIPOComponent
   ],
   imports: [
     BrowserModule,

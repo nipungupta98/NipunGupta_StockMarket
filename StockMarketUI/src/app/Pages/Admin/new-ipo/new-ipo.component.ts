@@ -44,12 +44,13 @@ export class NewIPOComponent implements OnInit {
     this.ipo.CompanyName=this.itemForm.value["CompanyName"];
     this.ipo.StockExs=this.itemForm.value["StockExs"];
     this.ipo.Remarks=this.itemForm.value["Remarks"];
-    this.ipo.PricePerS=this.itemForm.value["PricePerS"];
-    this.ipo.TotalShares=this.itemForm.value["TotalShares"];
+    this.ipo.PricePerS=parseFloat(this.itemForm.value["PricePerS"]);
+    this.ipo.TotalShares=parseFloat(this.itemForm.value["TotalShares"]);
     this.ipo.OpenTime=this.itemForm.value["OpenTime"];
     
     console.log(this.ipo);
     this.adminservice.AddIPO(this.ipo).subscribe(res=>{
+      console.log(res)
       console.log('Record Added')
     })
 
@@ -58,6 +59,6 @@ export class NewIPOComponent implements OnInit {
     Price Per Share: ${this.ipo.PricePerS}\n
     Total Shares:${this.ipo.TotalShares}`)
 
-    this.router.navigateByUrl('/app-admin-landing')
+    this.router.navigateByUrl('/app-manage-ipo')
   }
 }
