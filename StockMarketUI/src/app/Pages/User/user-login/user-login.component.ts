@@ -3,6 +3,7 @@ import { AccountService } from 'src/app/Services/account.service';
 import { Router } from "@angular/router";
 import { FormGroup, FormBuilder } from '@angular/forms';
 import {Token} from '../../../Models/token';
+import { ResourceLoader } from '@angular/compiler';
 
 
 @Component({
@@ -36,6 +37,8 @@ export class UserLoginComponent implements OnInit {
       }
       else if(res.token==""||res.token==null)
       {
+        window.alert("Invalid Username/Password \n Try again")
+        location.reload();
         console.log('Invalid Id');
       }
       else

@@ -1,5 +1,6 @@
 .login-form{
-    padding-top: 70px;
-    padding-left:550px;
-    padding-right:550px;
+    width:300px;
+    text-align:center;
+    margin:0 auto;
+    padding-top:30px;
 }

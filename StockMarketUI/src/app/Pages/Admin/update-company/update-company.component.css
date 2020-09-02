@@ -1,7 +1,9 @@
 .form{
-    padding-left:550px;
-    padding-right:550px;
+width:400px;
+margin:0 auto;
+padding-top:35px;
 }
-h3{
-    font-size:medium;
+
+.h3{
+    font-size: medium;
 }

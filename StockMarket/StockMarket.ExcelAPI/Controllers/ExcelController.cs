@@ -78,7 +78,6 @@ namespace StockMarket.ExcelAPI.Controllers
         [Route("GetChartData/{companyID}")]
         public IActionResult GetChartData(string companyID)
         {
-
             List<StockPrice> StockPriceData = _db.StockPrices.ToList();
 
             List<float> ChartData = new List<float>();
@@ -90,13 +89,35 @@ namespace StockMarket.ExcelAPI.Controllers
                     ChartData.Add(float.Parse(data.PricePerShare));
                 }
             }
-
             if (ChartData.Count() == 0)
             {
                 throw new Exception("Enter valid CompanyID");
             }
 
             return Ok(ChartData);
+        }
+
+        [HttpGet]
+        [Route("GetChartTime/{companyID}")]
+        public IActionResult GetChartTime(string companyID)
+        {
+            List<StockPrice> StockPriceData = _db.StockPrices.ToList();
+
+            List<string> ChartTimes = new List<string>();
+
+            foreach (StockPrice data in StockPriceData)
+            {
+                if (data.CompanyCode == companyID)
+                {
+                    ChartTimes.Add(data.Time);
+                }
+            }
+            if (ChartTimes.Count() == 0)
+            {
+                throw new Exception("Enter valid CompanyID");
+            }
+
+            return Ok(ChartTimes);
         }
     }
 }
