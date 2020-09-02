@@ -23,6 +23,7 @@
             <input type="password" [(ngModel)] = "Password" class="form-control" 
             formControlName = "Password" placeholder="Password" required="required">
         </div>
+        <div [hidden] = "!invalid">Either username or password doesn't match</div>
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block" (click) = "Validate()">Log in</button>
         </div>  

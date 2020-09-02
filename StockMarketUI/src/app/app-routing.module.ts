@@ -21,22 +21,46 @@ import {ManageIPOComponent} from '../app/Pages/Admin/manage-ipo/manage-ipo.compo
 
 const routes: Routes = [
   {path: '',   redirectTo: '/app-home', pathMatch: 'full' },
-  {path: 'app-manage-company', component:ManageCompanyComponent, canActivate:[AuthGuard]},
+  {path: 'app-manage-company', component:ManageCompanyComponent, canActivate:[AuthGuard], data: {
+    Confirmed: 'Admin'
+  }},
   {path: 'app-user-login', component:UserLoginComponent},
   {path: 'app-admin-login', component:AdminLoginComponent},
   {path: 'app-signup', component:SignupComponent, 
   children:[{path:'app-user-landing', component: UserLandingComponent}]},
-  {path: 'app-admin-landing',component:AdminLandingComponent, canActivate:[AuthGuard]},
-  {path: 'app-user-landing', component:UserLandingComponent, canActivate:[AuthGuard]},
-  {path: 'app-new-company', component:NewCompanyComponent, canActivate:[AuthGuard]},
-  {path: 'app-chart', component:ChartComponent, canActivate:[AuthGuard]},
-  {path: 'app-new-ipo', component:NewIPOComponent, canActivate:[AuthGuard]},
-  {path: 'app-update-company', component:UpdateCompanyComponent, canActivate:[AuthGuard]},
-  {path: 'app-update-ipo', component:UpdateIPOComponent, canActivate:[AuthGuard]},
-  {path: 'app-comparison-charts', component:ComparisonChartsComponent, canActivate:[AuthGuard]},
-  {path: 'app-getipo', component:GetipoComponent, canActivate:[AuthGuard]},
-  {path:'app-manage-ipo', component:ManageIPOComponent, canActivate:[AuthGuard]},
-  {path: 'app-import-stock', component: ImportStockComponent, canActivate:[AuthGuard]},
+  {path: 'app-admin-landing',component:AdminLandingComponent, canActivate:[AuthGuard], data: {
+    Confirmed: 'Admin'
+  }},
+  {path: 'app-user-landing', component:UserLandingComponent, canActivate:[AuthGuard], data: {
+    Confirmed: 'User'
+  }},
+  {path: 'app-new-company', component:NewCompanyComponent, canActivate:[AuthGuard], data: {
+    Confirmed: 'Admin'
+  }},
+  {path: 'app-chart', component:ChartComponent, canActivate:[AuthGuard], data: {
+    Confirmed: 'User'
+  }},
+  {path: 'app-new-ipo', component:NewIPOComponent, canActivate:[AuthGuard], data: {
+    Confirmed: 'Admin'
+  }},
+  {path: 'app-update-company', component:UpdateCompanyComponent, canActivate:[AuthGuard], data: {
+    Confirmed: 'Admin'
+  }},
+  {path: 'app-update-ipo', component:UpdateIPOComponent, canActivate:[AuthGuard], data: {
+    Confirmed: 'Admin'
+  }},
+  {path: 'app-comparison-charts', component:ComparisonChartsComponent, canActivate:[AuthGuard], data: {
+    Confirmed: 'User'
+  }},
+  {path: 'app-getipo', component:GetipoComponent, canActivate:[AuthGuard], data: {
+    Confirmed: 'User'
+  }},
+  {path:'app-manage-ipo', component:ManageIPOComponent, canActivate:[AuthGuard], data: {
+    Confirmed: 'Admin'
+  }},
+  {path: 'app-import-stock', component: ImportStockComponent, canActivate:[AuthGuard],data: {
+    Confirmed: 'Admin'
+  }},
   {path: 'app-home', component:HomeComponent},
   {path: '**', component: NotFoundComponent}
 ];

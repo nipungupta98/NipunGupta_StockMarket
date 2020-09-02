@@ -5,6 +5,8 @@ import { ErrorInterceptor} from "./error-interceptor";
 import { ReactiveFormsModule, FormsModule } from'@angular/forms';
 import {AuthInterceptor} from './auth-interceptor';
 
+import {ChartsModule} from 'ng2-charts';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './Pages/User/signup/signup.component';
@@ -57,15 +59,17 @@ import { ManageIPOComponent } from './Pages/Admin/manage-ipo/manage-ipo.componen
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ChartsModule
   ],
   exports:[ RouterModule ],
   providers: [AdminService, UserService, ExcelService, AccountService
-    ,{
-      provide: HTTP_INTERCEPTORS,
-      useClass: ErrorInterceptor,
-      multi: true
-    }, {
+    //,{
+     // provide: HTTP_INTERCEPTORS,
+    //  useClass: ErrorInterceptor,
+     // multi: true
+   // }
+    , {
     provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true
   }
 ],

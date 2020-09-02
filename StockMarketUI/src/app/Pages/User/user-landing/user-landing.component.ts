@@ -13,7 +13,9 @@ export class UserLandingComponent implements OnInit {
   ngOnInit(): void {
   }
   logout(){
-    localStorage.clear();
+    localStorage.removeItem('token');
+    localStorage.removeItem('ROLE');    
+    
     this.router.navigateByUrl("/app-home")
   }
 

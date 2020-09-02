@@ -16,7 +16,6 @@ export class UserLoginComponent implements OnInit {
   itemForm:FormGroup;
 
   constructor(private accountservice:AccountService, private router:Router, private builder:FormBuilder) {
-    localStorage.clear();
    }
 
   ngOnInit(): void {
@@ -32,7 +31,8 @@ export class UserLoginComponent implements OnInit {
       {
         localStorage.setItem('token',res.token)
       console.log(res)
-      this.router.navigateByUrl('item');
+      this.router.navigateByUrl('/app-user-landing');
+      localStorage.setItem('ROLE', 'USER')
       }
       else if(res.token==""||res.token==null)
       {
@@ -43,6 +43,7 @@ export class UserLoginComponent implements OnInit {
       localStorage.setItem('token',res.token)
       console.log(res)
       this.router.navigateByUrl('/app-user-landing');
+      localStorage.setItem('ROLE', 'USER')
       }
     })
   }

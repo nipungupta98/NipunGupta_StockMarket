@@ -1,8 +1,8 @@
 export class StockPrice {
-    DataID;
-    CompanyCode;
-    CompanyName;
-    PricePerS;
-    Date;
-    Time;
+    dataID;
+    companyCode;
+    companyName;
+    pricePerS;
+    date;
+    time;
 }

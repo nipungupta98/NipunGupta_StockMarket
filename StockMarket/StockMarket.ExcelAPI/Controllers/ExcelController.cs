@@ -54,6 +54,13 @@ namespace StockMarket.ExcelAPI.Controllers
                 return _db.StockPrices.ToList();
             }
         }
+        [HttpGet]
+        [Route("GetData")]
+        public IList<StockPrice> GetData()
+        {
+            return _db.StockPrices.ToList();
+        }
+
         [HttpDelete]
         [Route("Clear")]
         public IActionResult ClearStocks()
@@ -68,12 +75,28 @@ namespace StockMarket.ExcelAPI.Controllers
             return Ok("Data cleared");
         }
         [HttpGet]
-        [Route("Show")]
-        public IList<StockPrice> ShowData()
+        [Route("GetChartData/{companyID}")]
+        public IActionResult GetChartData(string companyID)
         {
-            return _db.StockPrices.ToList();
-        }
 
-       
+            List<StockPrice> StockPriceData = _db.StockPrices.ToList();
+
+            List<float> ChartData = new List<float>();
+
+            foreach(StockPrice data in StockPriceData)
+            {
+                if(data.CompanyCode == companyID)
+                {
+                    ChartData.Add(float.Parse(data.PricePerShare));
+                }
+            }
+
+            if (ChartData.Count() == 0)
+            {
+                throw new Exception("Enter valid CompanyID");
+            }
+
+            return Ok(ChartData);
+        }
     }
 }

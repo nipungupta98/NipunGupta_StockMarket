@@ -34,7 +34,8 @@ export class UpdateIPOComponent implements OnInit {
     }
     logout()
     {
-      localStorage.clear()
+      localStorage.removeItem('token');
+      localStorage.removeItem('ROLE');      
       this.router.navigateByUrl('/app-home')
     }
   Update()
