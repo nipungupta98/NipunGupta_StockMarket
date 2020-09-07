@@ -24,17 +24,17 @@ export class ChartComponent implements OnInit {
   company2data=[]
   times = []
 
-  barChartOptions = {
+  LineChartOptions = {
     scaleShowVerticalLines: false,
     responsive: true
   };
 
-  public barChartLabels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014'];
-  public barChartType = 'bar';
-  public barChartLegend = true;
+  public LineChartLabels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014'];
+  public LineChartType = 'line';
+  public LineChartLegend = true;
 
 
-  public barChartData = [
+  public LineChartData = [
     {data: this.company1data, label: this.company1},
     {data: this.company2data, label: this.company2}
   ];
@@ -68,17 +68,17 @@ export class ChartComponent implements OnInit {
   }
   plot(company1data, company2data, times){
 
-      this.barChartOptions = {
+      this.LineChartOptions = {
       scaleShowVerticalLines: false,
       responsive: true
     };
   
-    this.barChartLabels = times;
-    this.barChartType = 'bar';
-    this.barChartLegend = true;
+    this.LineChartLabels = times;
+    this.LineChartType = 'line';
+    this.LineChartLegend = true;
   
   
-    this.barChartData = [
+    this.LineChartData = [
       {data: company1data, label: this.company1},
       {data: company2data, label: this.company2}
     ];

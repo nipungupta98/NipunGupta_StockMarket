@@ -155,7 +155,7 @@ namespace StockMarket.AccountAPI.Controllers
         }
 
         [HttpDelete]
-        [Route("DeleteUser/{UID}")]
+        [Route("DeleteUser/{UID: string}")]
         public IActionResult DeleteUser(string UID)
         {
             accountservice.DeleteUser(UID);

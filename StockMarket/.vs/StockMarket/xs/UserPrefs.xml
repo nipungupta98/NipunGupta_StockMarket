@@ -1,0 +1,62 @@
+﻿<Properties StartupConfiguration="{78323D8B-A2A4-47BC-B6BF-C10D0100BDE3}|Default">
+  <MonoDevelop.Ide.ItemProperties.StockMarket.ExcelAPI PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.StockMarket.UserAPI PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.StockMarket.Gateway PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.StockMarket.AccountAPI PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="StockMarketTest/AdminTest.cs">
+    <Files>
+      <File FileName="StockMarket.AdminAPI/Controllers/AdminController.cs" Line="1" Column="1" />
+      <File FileName="StockMarketTest/UnitTest1.cs" Line="24" Column="32" />
+      <File FileName="StockMarketTest/EmptyClass.cs" Line="26" Column="57" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="StockMarket" expanded="True">
+            <Node name="StockMarket.UserAPI" expanded="True">
+              <Node name="Controllers" expanded="True" />
+            </Node>
+            <Node name="StockMarketTest" expanded="True">
+              <Node name="AdminTest.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="StockMarket" expanded="True">
+            <Node name="StockMarketTest" expanded="True">
+              <Node name="StockMarketTest" expanded="True">
+                <Node name="AccountTest" expanded="True" />
+                <Node name="AdminTest" expanded="True">
+                  <Node name="TestGetAllCompanies" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.StockMarketTest PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.StockMarket.AdminAPI PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
+      <Items>
+        <StartupItem ItemId="{5DF212CE-B061-4C5F-A3A5-2AAEE689FEF3}" ItemName="StockMarket.AccountAPI" ConfigurationId="Default" />
+        <StartupItem ItemId="{7D31B400-20D8-416D-B89F-5B6E8C2BF68E}" ItemName="StockMarket.AdminAPI" ConfigurationId="Default" />
+        <StartupItem ItemId="{E493E443-C7BB-4CF5-9C7A-8B9BC28287E3}" ItemName="StockMarket.ExcelAPI" ConfigurationId="Default" />
+        <StartupItem ItemId="{C397A86D-D50F-4E50-B4C0-0B0D8EB18EFD}" ItemName="StockMarket.Gateway" ConfigurationId="Default" />
+        <StartupItem ItemId="{D4F6B80E-AA82-45A0-B114-2530B0A9A5A6}" ItemName="StockMarket.UserAPI" ConfigurationId="Default" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
+</Properties>

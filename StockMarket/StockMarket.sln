@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockMarket.ExcelAPI", "Sto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarket.Gateway", "StockMarket.Gateway\StockMarket.Gateway.csproj", "{C397A86D-D50F-4E50-B4C0-0B0D8EB18EFD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarketTest", "StockMarketTest\StockMarketTest.csproj", "{78323D8B-A2A4-47BC-B6BF-C10D0100BDE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C397A86D-D50F-4E50-B4C0-0B0D8EB18EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C397A86D-D50F-4E50-B4C0-0B0D8EB18EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C397A86D-D50F-4E50-B4C0-0B0D8EB18EFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78323D8B-A2A4-47BC-B6BF-C10D0100BDE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78323D8B-A2A4-47BC-B6BF-C10D0100BDE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78323D8B-A2A4-47BC-B6BF-C10D0100BDE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78323D8B-A2A4-47BC-B6BF-C10D0100BDE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
